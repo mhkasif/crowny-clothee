@@ -40,7 +40,7 @@ import '../../styles/directory.scss'
   };
   render() {
     const { sections } = this.state;
-    return <div className="directory-menu">{sections.map(({title,size,imageUrl,id})=><MenuItem imageUrl={imageUrl} key={id} size={size} title={title.toUpperCase()} />)}</div>;
+    return <div className="directory-menu">{sections.map(({id,...restSectionProps})=><MenuItem  key={id} {...restSectionProps} />)}</div>;
   }
 }
 export default Directory;
