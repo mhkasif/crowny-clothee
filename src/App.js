@@ -1,19 +1,20 @@
 import React from "react";
-import {Switch,Route} from 'react-router-dom'
-import Homepage from './Pages/HomePage/Homepage';
+import { Switch, Route } from "react-router-dom";
+import Homepage from "./Pages/HomePage/Homepage";
 import "./App.css";
-import Shop from './Components/Shop/ShopPage';
-import Auth from './Pages/HomePage/Authentication/Auth';
+import Shop from "./Components/Shop/ShopPage";
 
-
+import Header from "./Components/Header/Header";
 
 function App() {
+  return (  <div>
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route path="/shop" component={Shop} />
 
-  return <Switch>
-  <Route exact path='/' component={Homepage} />
-  <Route path='/shop' component={Shop} />
-  <Route path='/signin' component={Auth} />
-  </Switch>
+    </Switch>
+  </div>)
 }
 
 export default App;
