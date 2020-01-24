@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import FormInput from '../FormInput/FormInput';
-import '../../styles/sign-in.scss'
-import CustomButton from '../CustomButton/CustomButton';
-import { signInWithGoogle } from '../../firebase/utility/firebase';
+import FormInput from '../../FormInput/FormInput';
+import '../../../styles/sign-in.scss'
+import CustomButton from '../../CustomButton/CustomButton';
+import { signInWithGoogle } from '../../../firebase/utility/firebase';
 export default class SignIn extends Component {
   state = {
     email: "",
