@@ -1,4 +1,4 @@
-import { SET_CURRENT_USER } from '../../constants/constants';
+import { SET_CURRENT_USER } from '../../constants/userConstants';
 const initialState={
     currentUser:null
 };
