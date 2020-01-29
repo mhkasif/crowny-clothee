@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../../src/assets/logo/crown.svg";
 import "../../styles/header.scss";
 import { auth } from "../../firebase/utility/firebase";
-export default class Header extends Component {
+import { connect } from "react-redux";
+ class Header extends Component {
   render() {
     const { currentUser } = this.props;
     return (
@@ -31,3 +32,8 @@ export default class Header extends Component {
     );
   }
 }
+const mapStateToProps=(state)=>({
+  currentUser:state.user.currentUser
+
+})
+export default connect(mapStateToProps)(Header)
